@@ -76,3 +76,21 @@ Flexibility: They offer tunable parameters to control model complexity, crucial 
 **Pipeline Implementation**: We implemented the feature transformations and model training steps in a single sklearn Pipeline. This streamlined approach ensures a more efficient and error-free process in both training and predicting.
 
 **Data Splitting**: We split our dataset into training and test sets, with 35% of the data reserved for testing. This split allows us to evaluate our model’s performance on unseen data, providing insights into its generalization capabilities.
+
+### Performance Evaluation
+
+Metrics Used: To evaluate our model, we used metrics such as Root Mean Square Error (RMSE), Mean Squared Error (MSE), and R^2 Score for both training set and test set. These metrics provide a comprehensive view of the model's accuracy and predictive power.
+
+| Metric    |   Training Set |      Test Set |
+|:----------|---------------:|--------------:|
+| RMSE      |     424.18     |    416.131    |
+| MSE       |  179928        | 173165        |
+| R^2 Score |       0.477754 |      0.478437 |
+
+Model Performance:
+
+The R^2 scores close to 0.48 for both training and test sets imply that nearly half of the variance in the calorie content is explained by the model. While this is a reasonable start, there is substantial room for improvement.
+
+General Assessment: While the baseline model establishes an initial understanding of the relationship between recipe characteristics and caloric content, there is room for improvement. The Decision Tree Regressor, in its current form, may not capture all the nuances and complexities of the data.
+
+Areas for Improvement: The model's performance, particularly in terms of RMSE and R^2 Score, suggests that additional feature engineering, more sophisticated modeling techniques, or hyperparameter tuning could yield better results.
