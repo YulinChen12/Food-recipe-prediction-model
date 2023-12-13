@@ -21,3 +21,8 @@ Our approach encompasses several key stages:
 3. Predictive Modeling: Employing machine learning techniques, we build and refine models to predict caloric content. Our journey begins with a baseline model, which we iteratively improve to achieve enhanced accuracy.
 
 4. Fairness Assessment: We conduct a fairness analysis to evaluate whether our model's performance is equitable across different recipe categories, ensuring ethical and unbiased results.
+
+Structure of the Report
+
+    This report details each phase of our project, from the initial problem framing to the final model evaluation. We provide transparent insights into our methodology, the challenges encountered, and the solutions implemented. Our analysis culminates in a discussion of the model's performance and its implications for real-world applications.
+
