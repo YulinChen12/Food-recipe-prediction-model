@@ -59,8 +59,20 @@ In the initial phase of our predictive analysis, we developed a baseline model t
 
 ### Model Choice
 
-The model chosen for this task is a **Decision Tree Regressor**. This model was selected for its simplicity and interpretability, making it an ideal choice for a baseline model.
+The model chosen for this task is a **Decision Tree Regressor**.
+We selected the Decision Tree Regressor for our baseline model due to its:
 
-Model Training
-Pipeline Implementation: We implemented the feature transformations and model training steps in a single sklearn Pipeline. This streamlined approach ensures a more efficient and error-free process in both training and predicting.
-Data Splitting: We split our dataset into training and test sets, with 35% of the data reserved for testing. This split allows us to evaluate our model’s performance on unseen data, providing insights into its generalization capabilities.
+*Interpretability: Decision trees provide clear, logical decision paths, making it easy to understand and explain how recipe features influence caloric predictions.
+
+*Handling of Non-Linear Relationships: They are capable of capturing complex, non-linear relationships between features and the target variable, which is essential for the diverse nature of recipe data.
+
+*Ease of Use with Mixed Data Types: Decision trees effortlessly manage both numerical and categorical data, aligning well with our varied dataset features.
+
+*Flexibility: They offer tunable parameters to control model complexity, crucial for preventing overfitting and refining model performance.
+
+
+### Model Training
+
+**Pipeline Implementation**: We implemented the feature transformations and model training steps in a single sklearn Pipeline. This streamlined approach ensures a more efficient and error-free process in both training and predicting.
+
+**Data Splitting**: We split our dataset into training and test sets, with 35% of the data reserved for testing. This split allows us to evaluate our model’s performance on unseen data, providing insights into its generalization capabilities.
