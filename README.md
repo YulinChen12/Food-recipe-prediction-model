@@ -39,6 +39,21 @@ Key cleaning steps included:
 
 **Response Variable**: The chosen response variable is the caloric content of each recipe. This variable is pivotal for anyone monitoring their calorie intake or seeking to understand the nutritional value of different recipes.
 
-**Evaluation Metric**: We opted for the Root Mean Square Error (RMSE) as our primary evaluation metric. RMSE is particularly suitable for regression problems as it penalizes larger errors more severely, providing a more accurate reflection of the model's performance.
+**Evaluation Metric**: We opted for the Root Mean Square Error (RMSE) and R^2 (Coefficient of determination) as our primary evaluation metric. RMSE is particularly suitable for regression problems as it penalizes larger errors more severely, providing a more accurate reflection of the model's performance.
 
+## Baseline Model
+
+In the initial phase of our predictive analysis, we developed a baseline model to estimate the caloric content of recipes. This model serves as a foundation for our predictive task, setting a benchmark against which we can measure subsequent improvements.
+
+*Features Used*:
+
+**Quantitative Features**: We selected three features from our dataset to train our baseline model: **'minutes'**(preparation time), **'n_ingredients'** (number of ingredients), and **'n_steps'** (number of steps in the recipe).
+
+1. 'minutes' (Preparation Time): Preparation time is often correlated with the complexity and style of a recipe. Typically, more elaborate dishes require longer preparation times and can imply a higher likelihood of calorie-dense ingredients. This feature provides a foundational understanding of the recipe's nature.
+
+2. 'n_ingredients' (Number of Ingredients): The number of ingredients serves as a proxy for recipe complexity. Recipes with more ingredients may have a greater variety of food components, including those contributing to higher calorie counts. This feature helps in capturing the diversity within a recipe.
+
+3. 'n_steps' (Number of Steps): Similar to the number of ingredients, the number of steps can indicate a recipe's complexity. More steps might involve processes that add or modify caloric content, such as frying or adding sauces.
+
+**Feature Transformation**: We applied StandardScaler from sklearn to these features, ensuring they are appropriately scaled for use in our regression model.
 
