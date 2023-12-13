@@ -45,7 +45,7 @@ Key cleaning steps included:
 
 In the initial phase of our predictive analysis, we developed a baseline model to estimate the caloric content of recipes. This model serves as a foundation for our predictive task, setting a benchmark against which we can measure subsequent improvements.
 
-*Features Used*:
+### Features Used:
 
 **Quantitative Features**: We selected three features from our dataset to train our baseline model: **'minutes'**(preparation time), **'n_ingredients'** (number of ingredients), and **'n_steps'** (number of steps in the recipe).
 
@@ -57,3 +57,10 @@ In the initial phase of our predictive analysis, we developed a baseline model t
 
 **Feature Transformation**: We applied StandardScaler from sklearn to these features, ensuring they are appropriately scaled for use in our regression model.
 
+### Model Choice
+
+The model chosen for this task is a **Decision Tree Regressor**. This model was selected for its simplicity and interpretability, making it an ideal choice for a baseline model.
+
+Model Training
+Pipeline Implementation: We implemented the feature transformations and model training steps in a single sklearn Pipeline. This streamlined approach ensures a more efficient and error-free process in both training and predicting.
+Data Splitting: We split our dataset into training and test sets, with 35% of the data reserved for testing. This split allows us to evaluate our model’s performance on unseen data, providing insights into its generalization capabilities.
