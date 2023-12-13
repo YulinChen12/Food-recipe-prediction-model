@@ -62,13 +62,13 @@ In the initial phase of our predictive analysis, we developed a baseline model t
 The model chosen for this task is a **Decision Tree Regressor**.
 We selected the Decision Tree Regressor for our baseline model due to its:
 
-*Interpretability: Decision trees provide clear, logical decision paths, making it easy to understand and explain how recipe features influence caloric predictions.
+Interpretability: Decision trees provide clear, logical decision paths, making it easy to understand and explain how recipe features influence caloric predictions.
 
-*Handling of Non-Linear Relationships: They are capable of capturing complex, non-linear relationships between features and the target variable, which is essential for the diverse nature of recipe data.
+Handling of Non-Linear Relationships: They are capable of capturing complex, non-linear relationships between features and the target variable, which is essential for the diverse nature of recipe data.
 
-*Ease of Use with Mixed Data Types: Decision trees effortlessly manage both numerical and categorical data, aligning well with our varied dataset features.
+Ease of Use with Mixed Data Types: Decision trees effortlessly manage both numerical and categorical data, aligning well with our varied dataset features.
 
-*Flexibility: They offer tunable parameters to control model complexity, crucial for preventing overfitting and refining model performance.
+Flexibility: They offer tunable parameters to control model complexity, crucial for preventing overfitting and refining model performance.
 
 
 ### Model Training
