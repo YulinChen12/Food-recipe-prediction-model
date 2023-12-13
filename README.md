@@ -1,6 +1,5 @@
 
 # Calories-Prediction-Model 2023
-
 By Yulin Chen & Jiarui Zha  
 
 Exploratory data analysis on this dataset can be found
@@ -22,5 +21,15 @@ Our approach encompasses several key stages:
 
 4. Fairness Assessment: We conduct a fairness analysis to evaluate whether our model's performance is equitable across different recipe categories, ensuring ethical and unbiased results.
 
-##
+## Framing the Problem
+
+### Data Preparation and Cleaning
+
+The foundation of our analysis lies in the thorough and meticulous data cleaning process. We started by revisiting the data cleaning methods employed in our exploratory data analysis project, ensuring consistency and reliability in our dataset. Our dataset comprises two primary sources: recipe details and user interactions. We merged these datasets to create a comprehensive view of each recipe, including user ratings and comments.
+
+Key cleaning steps included:
+
+1. **Handling Missing Values**: We filled missing ratings with a default value of 0 and addressed other null values appropriately.
+
+2. **Feature Engineering**: We derived new features such as average ratings, preparation times, and counts of specific ingredients or tags (like 'health' mentions in reviews).
 
