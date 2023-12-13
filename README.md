@@ -7,7 +7,7 @@ Exploratory data analysis on this dataset can be found
 
 https://yulinchen12.github.io/Recipe-and-Average-Rating-Research-Project-2023/
 
-## Introduction  
+# Introduction  
 In the realm of culinary arts and nutritional science, understanding the caloric content of food is fundamental. It informs dietary choices, aids in health management, and fuels gastronomic creativity. This project leverages the power of data analysis and machine learning to address a compelling question: Can we accurately predict the calorie count of a recipe based on its inherent characteristics? 
 
 Our primary objective is to develop a predictive model capable of estimating the caloric content of recipes. This model aims to assist dietitians, culinary enthusiasts, and the general public in gauging the nutritional value of different recipes, fostering informed dietary choices. The ability to predict calorie counts from readily available recipe information could transform how we approach cooking and dietary planning.
@@ -22,7 +22,5 @@ Our approach encompasses several key stages:
 
 4. Fairness Assessment: We conduct a fairness analysis to evaluate whether our model's performance is equitable across different recipe categories, ensuring ethical and unbiased results.
 
-Structure of the Report
-
-    This report details each phase of our project, from the initial problem framing to the final model evaluation. We provide transparent insights into our methodology, the challenges encountered, and the solutions implemented. Our analysis culminates in a discussion of the model's performance and its implications for real-world applications.
+##
 
