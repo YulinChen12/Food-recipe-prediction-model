@@ -33,3 +33,12 @@ Key cleaning steps included:
 
 2. **Feature Engineering**: We derived new features such as average ratings, preparation times, and counts of specific ingredients or tags (like 'health' mentions in reviews).
 
+### Prediction Problem Definition
+
+**Type of Problem**: We are tackling a regression problem where the continuous response variable is the 'calories' of a recipe.
+
+**Response Variable**: The chosen response variable is the caloric content of each recipe. This variable is pivotal for anyone monitoring their calorie intake or seeking to understand the nutritional value of different recipes.
+
+**Evaluation Metric**: We opted for the Root Mean Square Error (RMSE) as our primary evaluation metric. RMSE is particularly suitable for regression problems as it penalizes larger errors more severely, providing a more accurate reflection of the model's performance.
+
+
