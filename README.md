@@ -94,3 +94,11 @@ The R^2 scores close to 0.48 for both training and test sets imply that nearly h
 General Assessment: While the baseline model establishes an initial understanding of the relationship between recipe characteristics and caloric content, there is room for improvement. The Decision Tree Regressor, in its current form, may not capture all the nuances and complexities of the data.
 
 Areas for Improvement: The model's performance, particularly in terms of RMSE and R^2 Score, suggests that additional feature engineering, more sophisticated modeling techniques, or hyperparameter tuning could yield better results.
+
+## Final Model
+
+### Introduction to Enhanced Features
+
+In refining our predictive model, we focused on incorporating features that provide deeper insights into the factors influencing a recipe's caloric content. These enhancements were guided by culinary intuition and data-driven hypotheses.
+
+#### New Feature Selection and Justification
