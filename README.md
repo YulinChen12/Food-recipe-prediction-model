@@ -147,3 +147,29 @@ Purpose: OneHotEncoder transforms these categorical variables into a format that
 Applied To: 'high_calories_count'.
 
 Purpose: The 'passthrough' strategy is used for the high-calorie ingredient count feature. Since this feature is already numerical and represents a direct count, it doesn't require scaling or normalization. It’s a straightforward quantitative representation of the presence of high-calorie ingredients in a recipe, and its raw value is directly relevant to the model.
+
+### Model Algorithm
+
+The initial baseline model employed a Decision Tree Regressor. For the final model, we continued with the Decision Tree Regressor. The decision to stick with the same algorithm was strategic, as it allows for a direct comparison between the baseline and final models. However, the final model differs significantly in its complexity and sophistication, primarily due to the introduction of new features and advanced hyperparameter tuning.
+
+### Hyperparameter Tuning
+
+In the baseline model, the Decision Tree Regressor was likely used with default parameters. 
+
+**Advanced Tuning**: 
+
+The final model involved a comprehensive hyperparameter tuning process using GridSearchCV. This method systematically explores a range of parameter combinations to find the most effective settings.
+
+**Parameters Tuned**: 
+
+Parameters such as '**max_depth**', '**min_samples_split**', and '**min_samples_leaf**' were among those tuned. These parameters are crucial in controlling the complexity of the tree, balancing between capturing sufficient detail in the data (depth and split) and avoiding overfitting (leaf size).
+
+### Reasoning Behind Tuning:
+
+**Max Depth**: Adjusting 'max_depth' helps in determining how deep the tree should grow. A deeper tree can capture more details but risks overfitting. A shallower tree might generalize better but could underfit.
+
+**Min Samples Split**: This parameter dictates the minimum number of samples required to split a node. Tuning it helps in determining the necessary sample size to consider a split, affecting the granularity of the tree.
+
+**Min Samples Leaf**: Setting the minimum samples for a leaf node helps in controlling the size of the tree's leaves. A larger number prevents the model from creating leaves with very few samples, which can reduce overfitting.
+
+The optimal hyperparameters we found were a **max_depth = None** , **decision_tree__min_samples_leaf': 2**, **decision_tree__min_samples_split': 5.**
