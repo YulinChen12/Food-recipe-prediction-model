@@ -172,4 +172,55 @@ Parameters such as '**max_depth**', '**min_samples_split**', and '**min_samples_
 
 **Min Samples Leaf**: Setting the minimum samples for a leaf node helps in controlling the size of the tree's leaves. A larger number prevents the model from creating leaves with very few samples, which can reduce overfitting.
 
-The optimal hyperparameters we found were a **max_depth = None** , **decision_tree__min_samples_leaf': 2**, **decision_tree__min_samples_split': 5.**
+The optimal hyperparameters we found were a **max_depth = None** , **decision_tree__min_samples_leaf': 2**, 
+**decision_tree__min_samples_split': 5.**
+
+### Model Improvement 
+
+#### Baseline Model
+
+| Metric    |   Training Set |      Test Set |
+|:----------|---------------:|--------------:|
+| RMSE      |     424.18     |    416.131    |
+| MSE       |  179928        | 173165        |
+| R^2 Score |       0.477754 |      0.478437 |
+
+#### Final Model
+| Metric    |   Training Set |      Test Set |
+|:----------|---------------:|--------------:|
+| RMSE      |     295.912    |    319.708    |
+| MSE       |   87563.7      | 102213        |
+| R^2 Score |       0.736122 |      0.712551 |
+
+**RMSE** (Root Mean Square Error):
+
+Baseline Model: The baseline model had an RMSE of 424.18 on the training set and 416.131 on the test set. These figures represent the standard deviation of the prediction errors, indicating the average distance between the predicted values and the actual values.
+
+Final Model: The RMSE of the final model is lower than these values, it indicates a significant improvement. A lower RMSE means the prediction errors are smaller, and the model's predictions are closer to the actual data.
+
+**R^2 Score**:
+
+Baseline Model: The R^2 scores of 0.477754 for the training set and 0.478437 for the test set in the baseline model.
+
+Final Model: The R^2 scores of 0.736122 for the trainning set and 0.712551 for the test set. An increase in the R^2 score in the final model would mean it can explain a higher proportion of the variance in the target variable.It suggests that the final model, with its advanced features and optimized hyperparameters, captures the underlying patterns in the data more effectively.
+
+## Fairness Analysis
+
+In order to understand our predictive model deeper, we pose the question, “Does our model exhibit differential performance for recipes containing cheese compared to those without?” 
+
+**Group X**: Recipes that include 'cheese'.
+
+**Group Y**: Recipes that do not include 'cheese'.
+
+The metric to test this evaluation is the **RMSE** (Root Mean Squared Error ), since it could give us the model's accuracy by quantifying the average of the prediction errors. Our hypothesis is as follows:
+
+**Null Hypothesis (H0)**: There is no significant difference in the RMSE between recipes with cheese and without cheese .
+
+**Alternative Hypothesis (H1)**: There is a significant difference in the RMSE between recipes with cheese and without cheese.
+
+We firstly set our significance level as the common significance level 0.05. Then we conduct A **permutation test** with 1000 permutations to assess the significance of the difference in RMSE between the two groups. The result shows that the p-value from the permutation test is **0.07**.  
+
+Since p_value ≥ 0.05, we fail to reject the null. we could conclude that there is not enough statistical evidence to reject the null hypothesis, implying that any observed differences in RMSE between the two groups might be due to chance. This outcome does not align with our first thought that calories have to be highly correlated to the “Cheese” feature. However, the test result does not imply absolute certainty. There are no confirmed casual relationships since it can be influenced by various factors. 
+
+## Conclusion
+
