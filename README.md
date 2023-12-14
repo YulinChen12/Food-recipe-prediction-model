@@ -103,7 +103,7 @@ In refining our predictive model, we focused on incorporating features that prov
 
 #### New Feature Selection and Justification
 
-1. **Categorical Features** - **'desserts', 'cheese', 'oven', 'health'**:
+**Categorical Features** - **'desserts', 'cheese', 'oven', 'health'**:
 
 **Desserts**:
 
@@ -122,7 +122,7 @@ Data Generating Perspective: From a nutritional viewpoint, cheese's high fat and
 Rationale: The use of an oven is often associated with certain types of recipes, like baked goods, which can vary significantly in calorie content. This feature helps in distinguishing between cooking methods that might correlate with different calorie levels.
 Data Generating Perspective: Oven usage can imply certain cooking processes like baking, which is often associated with specific food categories (e.g., baked desserts, casseroles) that have distinct caloric profiles. This differentiation is vital for a nuanced understanding of calorie estimation.
 
-2. **Quantitative Feature** - **High-Calorie Ingredient Count**:
+**Quantitative Feature** - **High-Calorie Ingredient Count**:
 
 Rationale: This feature directly addresses the influence of specific ingredients known for their high-calorie content. By counting these ingredients, the model gains a more accurate gauge of the recipe's potential calorie count.
 
