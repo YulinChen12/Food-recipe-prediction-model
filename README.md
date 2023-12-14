@@ -128,7 +128,7 @@ Rationale: This feature directly addresses the influence of specific ingredients
 
 Data Generating Perspective: The count of high-calorie ingredients like fats, oils, sugars, and certain proteins is a straightforward, quantifiable measure of a recipe's calorie potential. This feature is grounded in the fundamental principle of nutrition science that certain ingredients disproportionately contribute to the overall calorie count.
 
-#### Pipeline Transformations for all the Features:
+### Pipeline Transformations for all the Features:
 
 **StandardScaler** for Numerical Features:
 
