@@ -102,3 +102,28 @@ Areas for Improvement: The model's performance, particularly in terms of RMSE an
 In refining our predictive model, we focused on incorporating features that provide deeper insights into the factors influencing a recipe's caloric content. These enhancements were guided by culinary intuition and data-driven hypotheses.
 
 #### New Feature Selection and Justification
+
+1. **Categorical Features** - **'desserts', 'cheese', 'oven', 'health'**:
+
+**Desserts**:
+
+Rationale: Dessert recipes are often characterized by high sugar content, which significantly contributes to calorie density. Including this feature helps the model identify recipes that are likely to be higher in calories due to their dessert classification.
+
+Data Generating Perspective: The dessert categorization is a proxy for recipes rich in sugars and fats, which are key factors in caloric computation. This classification reflects common dietary knowledge where desserts are generally considered calorie-heavy.
+
+**Cheese**:
+
+Rationale: Cheese is calorically dense, rich in fats and proteins. Its presence or prominence in a recipe can be a strong indicator of higher caloric content.
+
+Data Generating Perspective: From a nutritional viewpoint, cheese's high fat and protein content make it a significant contributor to a recipe's total calories. This feature allows the model to adjust predictions upwards for recipes with cheese, aligning with nutritional principles.
+
+**Oven Usage**:
+
+Rationale: The use of an oven is often associated with certain types of recipes, like baked goods, which can vary significantly in calorie content. This feature helps in distinguishing between cooking methods that might correlate with different calorie levels.
+Data Generating Perspective: Oven usage can imply certain cooking processes like baking, which is often associated with specific food categories (e.g., baked desserts, casseroles) that have distinct caloric profiles. This differentiation is vital for a nuanced understanding of calorie estimation.
+
+2. **Quantitative Feature** - **High-Calorie Ingredient Count**:
+
+Rationale: This feature directly addresses the influence of specific ingredients known for their high-calorie content. By counting these ingredients, the model gains a more accurate gauge of the recipe's potential calorie count.
+
+Data Generating Perspective: The count of high-calorie ingredients like fats, oils, sugars, and certain proteins is a straightforward, quantifiable measure of a recipe's calorie potential. This feature is grounded in the fundamental principle of nutrition science that certain ingredients disproportionately contribute to the overall calorie count.
