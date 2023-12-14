@@ -186,6 +186,7 @@ The optimal hyperparameters we found were a **max_depth = None** , **decision_tr
 | R^2 Score |       0.477754 |      0.478437 |
 
 #### Final Model
+
 | Metric    |   Training Set |      Test Set |
 |:----------|---------------:|--------------:|
 | RMSE      |     295.912    |    319.708    |
