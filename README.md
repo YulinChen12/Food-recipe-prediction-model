@@ -127,3 +127,20 @@ Data Generating Perspective: Oven usage can imply certain cooking processes like
 Rationale: This feature directly addresses the influence of specific ingredients known for their high-calorie content. By counting these ingredients, the model gains a more accurate gauge of the recipe's potential calorie count.
 
 Data Generating Perspective: The count of high-calorie ingredients like fats, oils, sugars, and certain proteins is a straightforward, quantifiable measure of a recipe's calorie potential. This feature is grounded in the fundamental principle of nutrition science that certain ingredients disproportionately contribute to the overall calorie count.
+
+#### Pipeline Transformations for all the Features:
+
+1. **StandardScaler** for Numerical Features:
+
+Applied To: 'minutes', 'n_ingredients', and 'n_steps'.
+Purpose: StandardScaler normalizes these numerical features, ensuring they have a mean of 0 and a standard deviation of 1. This scaling is crucial because it removes the bias that could be introduced by the varying scales and distributions of these numerical features. Standardization makes the model more stable and ensures that features with larger scales don’t dominate the model's learning process.
+
+2. **OneHotEncoder** for Categorical Features:
+
+Applied To: 'desserts', 'cheese', and 'oven'.
+Purpose: OneHotEncoder transforms these categorical variables into a format that can be effectively used by the regression model. Since machine learning models require numerical input, OneHotEncoding converts categorical data into a binary matrix, representing the presence or absence of a category with 1s and 0s. This method is particularly useful for nominal categories without intrinsic order, allowing the model to utilize these features without assuming any order or priority.
+
+3. **Passthrough** for High-Calorie Ingredient Count:
+
+Applied To: 'high_calories_count'.
+Purpose: The 'passthrough' strategy is used for the high-calorie ingredient count feature. Since this feature is already numerical and represents a direct count, it doesn't require scaling or normalization. It’s a straightforward quantitative representation of the presence of high-calorie ingredients in a recipe, and its raw value is directly relevant to the model.
